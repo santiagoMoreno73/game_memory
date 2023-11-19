@@ -1,0 +1,180 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    height: 100%;
+}
+
+span, h2, h4 {
+    color: var(--bg-white);
+}
+
+:root {
+    --rgb-black: rgba(8, 8, 8, 0.5);
+    --bg-black: #0000;
+    --bg-white: #ffffff;
+    --bg-yellow: #9f7f33;
+    --box-shadow: 0 0.06em 2em rgba(86, 66, 0, 0.2);
+}
+
+.bg-video {
+    object-fit: cover;
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    left: 0;
+}
+
+.wrapper {
+    box-sizing: content-box;
+    width: 26.87em;
+    height: auto;
+    padding: 2.5em 3em;
+    background: var(--rgb-black);
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    border-radius: 0.6em;
+    box-shadow: var(--box-shadow);
+    z-index: 1;
+}
+
+.game-container {
+    position: relative;
+    width: 100%;
+    display: grid;
+    gap: 0.8em;
+}
+
+.stats-container {
+    text-align: right;
+    margin-bottom: 1.2em;
+}
+
+.stats-container span {
+    font-weight: 600;
+}
+
+.controls-container {
+    z-index: 1;
+    position: absolute;
+    top: 54px;
+    left: 0;
+    display: flex;
+    justify-content: space-around;
+    width: 12rem;
+}
+
+.card-container {
+    position: relative;
+    width: 6.25em;
+    height: 6.25em;
+    cursor: pointer;
+}
+
+.card-before, .card-after {
+    position: absolute;
+    border-radius: 5px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid var(--bg-yellow);
+    transition: transform 0.7s ease-out;
+    backface-visibility: hidden;
+}
+
+.card-before {
+    background: var(--bg-black);
+    font-size: 2.8em;
+    color: var(--bg-white);
+}
+
+.card-after {
+    background: var(--bg-black);
+    transform: rotateY(180deg);
+}
+
+.card-container.flipped .card-before {
+    transform: rotateY(180deg);
+}
+
+.card-container.flipped .card-after {
+    transform: rotateY(0deg);
+}
+
+.icon {
+    width: 50px;
+    height: 50px;
+}
+
+.gif {
+    position: relative;
+    width: 150px;
+    height: 150px;
+}
+
+.image {
+    object-fit: cover;
+    width: 80px;
+    height: 80px;
+}
+
+.controls-container {
+    position: absolute;
+    display: flex;
+    background: var(--rgb-black);
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    top: 0;
+}
+
+button {
+    border: none;
+    border-radius: 0.3em;
+    padding: 1em 1.5em;
+    cursor: pointer;
+    font-size: 1.1em;
+    display: block;
+    margin: 1.1em auto 0 auto;
+    background: var(--rgb-black);
+    color: var(--bg-white);
+    transition: all 0.2s ease;
+}
+
+button:hover {
+    background: var(--bg-yellow);
+    transform: scale(0.96);
+}
+
+.controls-container button {
+    font-size: 1.3em;
+    box-shadow: var(--box-shadow);
+}
+
+.hide {
+    display: none;
+}
+
+#result {
+    text-align: center;
+}
+
+#result h2 {
+    font-size: 2.5em;
+}
+
+#result h4 {
+    font-size: 1.8em;
+    margin: 0.6em 0 1em 0;
+}

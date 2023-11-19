@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+    <link href="./style.css" rel="stylesheet" />
+    <title>Memory Game</title>
+</head>
+
+<body>
+    <video class="bg-video" autoplay loop muted>
+        <source src="./assets/video.mp4" type="video/mp4">
+    </video>
+
+    <div class="wrapper hide">
+        <div class="stats-container">
+            <div id="moves-count"></div>
+            <div id="time"></div>
+            <div id="timeGif"></div>
+        </div>
+        <div class="game-container"></div>
+        <button id="stop" class="hide">Stop Game</button>
+    </div>
+    <div class="controls-container">
+        <p id="result"></p>
+        <img id="pumpkin" src="./assets/jump.gif" class="gif" alt="pumpkin">
+        <button id="start">Start Game</button>
+    </div>
+
+    <!-- Script -->
+    <script src="script.js"></script>
+</body>
+
+</html>
