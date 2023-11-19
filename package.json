@@ -7,6 +7,6 @@
         "deploy": "vercel --prod"
     },
     "dependencies": {
-       
+        "vercel": "^32.5.5"
     }
 }
